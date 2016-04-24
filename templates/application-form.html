@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{% block header %}
+Application-Form
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>Job Application</h1>
+    <h4>These are the instuctions and also skills assessment 3 ;)</h4>
+
+    <form action="/application" method="POST">
+        <label for="field-firstname">First Name:</label>
+        <input id="field-firstname" type="text" name="firstname">
+        <br>
+        <br>
+        <label class="lastname" for="field-lastname">Last Name:</label>
+        <input id="field-lastname" type="text" name="lastname">
+        <br>
+        <br>
+        <label for="field-salary">Salary:</label>
+        <input for="field-salary" type="number" name="salary">
+        <br>
+        <br>
+        <label for="select-jobtitle">Job Title:</label> 
+            <select id="select-jobtitle" name="jobtitle">
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="QA Engineer">QA Engineer</option>
+                <option value="Product Manager">Product Manager</option>
+            </select>
+        <br>
+        <br>
+        <input type="Submit">
+    </form>
+
+{% endblock %}
